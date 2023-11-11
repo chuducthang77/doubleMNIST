@@ -17,7 +17,7 @@ for i in range(len(train_X)):
     im = Image.fromarray(train_X[i])
     im.save(f"../datasets/custom/images/train/{i}.jpeg")
     with open(f'../datasets/custom/labels/train/{i}.txt', 'w') as f:
-        f.write(train_Y[i])
+        f.write(str(train_Y[i]))
 
 np.save('m_train_Y.npy',train_Y)
 
@@ -41,7 +41,7 @@ for i in range(len(valid_X)):
     im = Image.fromarray(valid_X[i])
     im.save(f"../datasets/custom/images/valid/{i}.jpeg")
     with open(f'../datasets/custom/labels/valid/{i}.txt', 'w') as f:
-        f.write(valid_Y[i])
+        f.write(str(valid_Y[i]))
 
 
 np.save('m_valid_Y.npy',valid_Y)
