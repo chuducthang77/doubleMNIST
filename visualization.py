@@ -4,9 +4,9 @@ import numpy as np
 from PIL import Image
 
 
-# Load the image
-images_dir = "../zidane.jpg"
-labels_dir = "../zidane.txt"
+# Load the image (Change to the appropriate dataset)
+images_dir = "../datasets/custom/images/train/0.jpeg"
+labels_dir = "../datasets/custom/labels/train/0.txt"
 
 img = np.asarray(Image.open(images_dir))
 labels = np.loadtxt(labels_dir)
